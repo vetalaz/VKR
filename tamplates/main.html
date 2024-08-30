@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+
+<head>
+    <title>Варианты перемещения неходового товара</title>
+</head>
+
+<form action="'{{url_for('main')}}" method="POST">
+    <fieldset>
+        <legend>Введите значение</legend>
+            Код товара
+            <input name = 'kod_1' type="number"
+            required>
+            <br>
+            <br>
+            <input type="submit">
+    </fieldset>
+</form>
+
+<div class="result" align = 'center'>
+    {% if result %}
+        <br>
+        <p style="font-size: 50px">
+        Можно переместить в подразделение
+        </p>
+        <p style="font-size: 50px"></p>
+    {% endif %}
+</div>
